@@ -33,7 +33,7 @@ min.max.norm <- function(x) {
 # Shape the data into a dataframe that will be used to create classifications
 
 # Read in data
-setwd('./data/')
+setwd('../data/')
 depth.series <- read_csv("kauffman_et_al_2020_depthseries.csv", show_col_types = F)
 cores <- read_csv("kauffman_et_al_2020_cores.csv", show_col_types = F)
 
@@ -274,5 +274,5 @@ ggplot(data = knn.pca.labels, aes(x = class, fill = source)) +
 ggsave('./plots/predictions/pca_predictions.jpg', width = 4.5, height = 3.00)
 
 # Export results 
-write.csv(results, './results.csv', row.names = T)
+write.csv(results, '../products/results.csv', row.names = T)
 
